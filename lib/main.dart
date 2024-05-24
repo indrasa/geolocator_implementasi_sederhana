@@ -86,12 +86,12 @@ class _LokasiPemirsaState extends State<LokasiPemirsa> {
             Text(lokasiSekarang),
             IconButton(
               onPressed: () async {
-                print("mencari lokasimu cuk");
-                Position posisiCuk = await _determinePosition();
-                print(posisiCuk);
+                print("mencari lokasimu Bro");
+                Position posisiBro = await _determinePosition();
+                print(posisiBro);
                 setState(() {
                   lokasiSekarang =
-                      "Lat: ${posisiCuk.latitude} | Long: ${posisiCuk.longitude}";
+                      "Lat: ${posisiBro.latitude} | Long: ${posisiBro.longitude}";
                 });
               },
               icon: const Icon(Icons.search),
@@ -107,7 +107,7 @@ class _LokasiPemirsaState extends State<LokasiPemirsa> {
                 if (snapshot.hasData) {
                   return Column(
                     children: [
-                      const Text("ada datanya cuk"),
+                      const Text("ada datanya Bro"),
                       Text(
                           "Lat: ${snapshot.data!.latitude} Long: ${snapshot.data!.longitude}")
                     ],
